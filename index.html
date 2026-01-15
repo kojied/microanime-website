@@ -20,8 +20,8 @@
                 <span class="logo-text">Microanime</span>
             </a>
             <div class="nav-links">
-                <a href="#trending">Trending</a>
-                <a href="#genres">Genres</a>
+                <a href="#series">Series</a>
+                <a href="#features">Features</a>
                 <a href="#download">Download</a>
             </div>
             <a href="#download" class="btn btn-primary">Get the App</a>
@@ -38,11 +38,11 @@
                     <a href="#download" class="btn btn-primary btn-large">Download Free</a>
                     <div class="hero-stats">
                         <div class="stat">
-                            <span class="stat-number" id="total-episodes">500+</span>
+                            <span class="stat-number" id="total-episodes">35+</span>
                             <span class="stat-label">Episodes</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number" id="total-series">50+</span>
+                            <span class="stat-number" id="total-series">1</span>
                             <span class="stat-label">Series</span>
                         </div>
                     </div>
@@ -64,47 +64,21 @@
         </div>
     </section>
 
-    <!-- Featured Series -->
-    <section class="section" id="featured">
+    <!-- Series Section -->
+    <section class="section" id="series">
         <div class="container">
             <div class="section-header">
-                <h2>Featured Series</h2>
-                <p>Hand-picked by our editors</p>
+                <h2>Now Streaming</h2>
+                <p>Start watching today</p>
             </div>
-            <div class="featured-grid" id="featured-grid">
-                <!-- Populated by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Trending Section -->
-    <section class="section section-dark" id="trending">
-        <div class="container">
-            <div class="section-header">
-                <h2>Trending Now</h2>
-                <p>Most watched this week</p>
-            </div>
-            <div class="carousel" id="trending-carousel">
-                <!-- Populated by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Genres Section -->
-    <section class="section" id="genres">
-        <div class="container">
-            <div class="section-header">
-                <h2>Browse by Genre</h2>
-                <p>Find your perfect story</p>
-            </div>
-            <div class="genres-grid" id="genres-grid">
+            <div class="series-grid" id="series-grid">
                 <!-- Populated by JavaScript -->
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="section section-dark">
+    <section class="section section-dark" id="features">
         <div class="container">
             <div class="section-header">
                 <h2>Why Microanime?</h2>
@@ -145,7 +119,7 @@
                         </svg>
                     </div>
                     <h4>Free to Start</h4>
-                    <p>Watch many episodes completely free</p>
+                    <p>First 5 episodes completely free</p>
                 </div>
             </div>
         </div>
@@ -223,28 +197,6 @@
     <script>
         const DATA_URL = 'https://d15hc71e3n2xvd.cloudfront.net/data/series.json';
 
-        const GENRE_COLORS = {
-            'Romance': '#FF1744',
-            'Fantasy': '#7C4DFF',
-            'Action': '#00BCD4',
-            'Comedy': '#FF9800',
-            'Supernatural': '#9C27B0',
-            'Drama': '#FF5722',
-            'Historical': '#795548',
-            'Sports': '#4CAF50'
-        };
-
-        const GENRE_ICONS = {
-            'Romance': '&#10084;',
-            'Fantasy': '&#9733;',
-            'Action': '&#9889;',
-            'Comedy': '&#128514;',
-            'Supernatural': '&#128123;',
-            'Drama': '&#127917;',
-            'Historical': '&#127984;',
-            'Sports': '&#9917;'
-        };
-
         async function loadData() {
             try {
                 const response = await fetch(DATA_URL);
@@ -256,71 +208,29 @@
         }
 
         function renderContent(data) {
-            const { series, genres } = data;
+            const { series } = data;
 
             // Update stats
             const totalEpisodes = series.reduce((sum, s) => sum + s.totalEpisodes, 0);
             document.getElementById('total-episodes').textContent = totalEpisodes + '+';
-            document.getElementById('total-series').textContent = series.length + '+';
+            document.getElementById('total-series').textContent = series.length;
 
-            // Render featured (isFeatured = true)
-            const featured = series.filter(s => s.isFeatured);
-            renderFeatured(featured);
-
-            // Render trending (all series, sorted)
-            renderTrending(series);
-
-            // Render genres
-            renderGenres(series, genres);
+            // Render series
+            renderSeries(series);
         }
 
-        function getGradient(genre) {
-            const color = GENRE_COLORS[genre] || '#666';
-            return `linear-gradient(135deg, ${color} 0%, ${color}88 100%)`;
-        }
-
-        function renderFeatured(featured) {
-            const grid = document.getElementById('featured-grid');
-            grid.innerHTML = featured.map((s, i) => `
-                <div class="featured-card ${i === 0 ? 'featured-large' : ''}">
-                    <div class="card-image" style="background: ${getGradient(s.genre)};">
-                        ${s.isNew ? '<span class="card-badge">NEW</span>' : ''}
+        function renderSeries(series) {
+            const grid = document.getElementById('series-grid');
+            grid.innerHTML = series.map(s => `
+                <div class="series-card">
+                    <div class="series-image" style="background: linear-gradient(135deg, #FF1744 0%, #FF6B6B 100%);">
+                        <span class="series-badge">${s.totalEpisodes} Episodes</span>
                     </div>
-                    <div class="card-content">
-                        <span class="card-genre">${s.genre}</span>
+                    <div class="series-content">
                         <h3>${s.title}</h3>
-                        ${i === 0 ? `<p>${s.description.substring(0, 80)}...</p>` : ''}
-                        <span class="card-episodes">${s.totalEpisodes} Episodes</span>
+                        <p>${s.description}</p>
+                        <a href="#download" class="btn btn-primary">Watch Now</a>
                     </div>
-                </div>
-            `).join('');
-        }
-
-        function renderTrending(series) {
-            const carousel = document.getElementById('trending-carousel');
-            carousel.innerHTML = series.slice(0, 6).map((s, i) => `
-                <div class="drama-card">
-                    <div class="drama-thumbnail" style="background: ${getGradient(s.genre)};">
-                        <span class="drama-rank">#${i + 1}</span>
-                    </div>
-                    <h4>${s.title}</h4>
-                    <span class="drama-meta">${s.genre} &bull; ${s.totalEpisodes} Eps</span>
-                </div>
-            `).join('');
-        }
-
-        function renderGenres(series, genres) {
-            const grid = document.getElementById('genres-grid');
-            const genreCounts = {};
-            series.forEach(s => {
-                genreCounts[s.genre] = (genreCounts[s.genre] || 0) + 1;
-            });
-
-            grid.innerHTML = genres.map(genre => `
-                <div class="genre-card" style="--genre-color: ${GENRE_COLORS[genre] || '#666'};">
-                    <span class="genre-icon">${GENRE_ICONS[genre] || '&#9679;'}</span>
-                    <h4>${genre}</h4>
-                    <span>${genreCounts[genre] || 0} Series</span>
                 </div>
             `).join('');
         }

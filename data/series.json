@@ -1,106 +1,12 @@
 {
   "series": [
     {
-      "id": "love-in-tokyo-tower",
-      "title": "Love in Tokyo Tower",
-      "description": "A chance encounter at Tokyo Tower changes everything for two strangers from different worlds. When fate keeps bringing them together, they must choose between duty and love.",
-      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/love-in-tokyo-tower.jpg",
-      "genre": "Romance",
-      "totalEpisodes": 24,
-      "isFeatured": true,
-      "isNew": true
-    },
-    {
-      "id": "dragons-last-heir",
-      "title": "Dragon's Last Heir",
-      "description": "The last descendant of an ancient dragon bloodline discovers her powers on her 18th birthday. Now she must navigate a world of magic and betrayal.",
-      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/dragons-last-heir.jpg",
-      "genre": "Fantasy",
-      "totalEpisodes": 18,
-      "isFeatured": true,
-      "isNew": false
-    },
-    {
-      "id": "shadow-academy",
-      "title": "Shadow Academy",
-      "description": "An elite school hides deadly secrets. When a transfer student uncovers the truth, she becomes the target of forces beyond her imagination.",
-      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/shadow-academy.jpg",
-      "genre": "Action",
-      "totalEpisodes": 32,
-      "isFeatured": true,
-      "isNew": false
-    },
-    {
-      "id": "my-ceo-boyfriend",
-      "title": "My CEO Boyfriend",
-      "description": "A contract marriage between a struggling artist and a cold CEO turns into something neither expected. But his family has other plans.",
-      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/my-ceo-boyfriend.jpg",
-      "genre": "Romance",
-      "totalEpisodes": 28,
-      "isFeatured": false,
-      "isNew": false
-    },
-    {
-      "id": "reborn-as-villain",
-      "title": "Reborn as a Villain",
-      "description": "After dying, she wakes up as the villainess in her favorite novel. Can she change her fate and rewrite the story?",
-      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/reborn-as-villain.jpg",
-      "genre": "Fantasy",
-      "totalEpisodes": 45,
-      "isFeatured": false,
-      "isNew": true
-    },
-    {
-      "id": "campus-rivals",
-      "title": "Campus Rivals",
-      "description": "Two top students compete for everything - grades, popularity, and now the same person's heart. The ultimate campus comedy.",
-      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/campus-rivals.jpg",
-      "genre": "Comedy",
-      "totalEpisodes": 20,
-      "isFeatured": false,
-      "isNew": false
-    },
-    {
-      "id": "vampires-contract",
-      "title": "Vampire's Contract",
-      "description": "She signed a contract to save her brother. Now she belongs to the most powerful vampire lord for 100 nights.",
-      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/vampires-contract.jpg",
-      "genre": "Supernatural",
-      "totalEpisodes": 36,
-      "isFeatured": false,
-      "isNew": false
-    },
-    {
-      "id": "second-chance-love",
-      "title": "Second Chance Love",
-      "description": "Ten years after a painful breakup, they meet again. But this time, they're on opposite sides of a corporate war.",
-      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/second-chance-love.jpg",
-      "genre": "Drama",
-      "totalEpisodes": 22,
-      "isFeatured": false,
-      "isNew": false
-    },
-    {
-      "id": "hidden-prince",
-      "title": "The Hidden Prince",
-      "description": "A palace maid discovers she's been serving the true heir to the throne, hidden in plain sight. Ancient conspiracies unfold.",
-      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/hidden-prince.jpg",
-      "genre": "Historical",
-      "totalEpisodes": 40,
-      "isFeatured": false,
-      "isNew": false
-    },
-    {
-      "id": "infinite-inning",
-      "title": "Infinite Inning",
-      "description": "A baseball prodigy relives the same championship game over and over until he can figure out how to win - and why he's trapped.",
-      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/infinite-inning.jpg",
-      "genre": "Sports",
-      "totalEpisodes": 16,
-      "isFeatured": false,
-      "isNew": true
+      "id": "secret-life-billionaire-husband",
+      "title": "Secret Life of Billionaire Husband",
+      "description": "A seemingly ordinary marriage hides extraordinary secrets. When she discovers her husband's true identity, her world turns upside down.",
+      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/secret-life-billionaire-husband.jpg",
+      "totalEpisodes": 35
     }
   ],
-  "genres": ["Romance", "Fantasy", "Action", "Comedy", "Supernatural", "Drama", "Historical", "Sports"],
   "lastUpdated": "2025-01-15T00:00:00Z"
 }
