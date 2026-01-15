@@ -1,11 +1,32 @@
 {
   "series": [
     {
-      "id": "secret-life-billionaire-husband",
-      "title": "Secret Life of Billionaire Husband",
-      "description": "A seemingly ordinary marriage hides extraordinary secrets. When she discovers her husband's true identity, her world turns upside down.",
-      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/secret-life-billionaire-husband.jpg",
+      "id": "two-faces-of-the-archmage",
+      "title": "Two Faces of the Archmage",
+      "description": "A powerful mage hides a dark secret beneath his noble facade. When an unlikely apprentice discovers the truth, she must choose between exposing him or becoming his accomplice.",
+      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/two-faces-of-the-archmage.jpg",
       "totalEpisodes": 35
+    },
+    {
+      "id": "suffering-as-a-service",
+      "title": "Suffering as a Service",
+      "description": "In a dystopian future, a startup monetizes human misery. One employee discovers the horrifying truth behind their business model and risks everything to expose it.",
+      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/suffering-as-a-service.jpg",
+      "totalEpisodes": 24
+    },
+    {
+      "id": "infinite-inning",
+      "title": "Infinite Inning",
+      "description": "A baseball prodigy is trapped reliving the same championship game. To break free, he must uncover why he's stuck and what he's meant to learn.",
+      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/infinite-inning.jpg",
+      "totalEpisodes": 20
+    },
+    {
+      "id": "high-school-drama",
+      "title": "High School Drama",
+      "description": "Rivalries, romance, and revenge collide in this elite academy where every student has a secret. The new transfer student is about to shake everything up.",
+      "coverImageURL": "https://d15hc71e3n2xvd.cloudfront.net/covers/high-school-drama.jpg",
+      "totalEpisodes": 30
     }
   ],
   "lastUpdated": "2025-01-15T00:00:00Z"
