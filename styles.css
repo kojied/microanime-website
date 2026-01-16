@@ -162,6 +162,12 @@ img {
     margin-bottom: 20px;
 }
 
+.coming-soon-large {
+    padding: 16px 40px;
+    font-size: 18px;
+    border-radius: 30px;
+}
+
 /* Notify Form */
 .notify-form {
     display: flex;
