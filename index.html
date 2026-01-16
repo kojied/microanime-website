@@ -24,7 +24,7 @@
                 <a href="#features">Features</a>
                 <a href="#download">Download</a>
             </div>
-            <a href="#download" class="btn btn-primary">Get the App</a>
+            <span class="btn btn-secondary">Coming Soon</span>
         </nav>
     </header>
 
@@ -32,10 +32,11 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
+                <span class="coming-soon-badge">Coming Soon</span>
                 <h1>Bite-Sized Anime Drama</h1>
                 <p>Watch captivating anime stories in 1-2 minute episodes. Perfect for your busy lifestyle. New episodes every day.</p>
                 <div class="hero-cta">
-                    <a href="#download" class="btn btn-primary btn-large">Download Free</a>
+                    <a href="#download" class="btn btn-primary btn-large">Get Notified</a>
                     <div class="hero-stats">
                         <div class="stat">
                             <span class="stat-number" id="total-episodes">109+</span>
@@ -68,8 +69,8 @@
     <section class="section" id="series">
         <div class="container">
             <div class="section-header">
-                <h2>Now Streaming</h2>
-                <p>Start watching today</p>
+                <h2>Coming Soon</h2>
+                <p>Original series in production</p>
             </div>
             <div class="series-grid" id="series-grid">
                 <!-- Populated by JavaScript -->
@@ -130,20 +131,13 @@
         <div class="container">
             <div class="download-content">
                 <div class="download-text">
-                    <h2>Download Microanime</h2>
-                    <p>Start watching amazing anime dramas today. Available on iOS.</p>
-                    <div class="download-buttons">
-                        <a href="#" class="store-badge">
-                            <svg viewBox="0 0 24 24" fill="currentColor" class="store-icon">
-                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                            </svg>
-                            <div class="store-text">
-                                <span>Download on the</span>
-                                <strong>App Store</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <p class="download-note">Android coming soon!</p>
+                    <h2>Be the First to Know</h2>
+                    <p>Get notified when Microanime launches on iOS.</p>
+                    <form class="notify-form" action="#" method="POST">
+                        <input type="email" placeholder="Enter your email" class="notify-input" required>
+                        <button type="submit" class="btn btn-primary">Notify Me</button>
+                    </form>
+                    <p class="download-note">We'll only email you when we launch. No spam.</p>
                 </div>
                 <div class="download-visual">
                     <div class="phone-mockup phone-mockup-large">
@@ -251,7 +245,7 @@
                     <div class="series-content">
                         <h3>${s.title}</h3>
                         <p>${s.description}</p>
-                        <a href="#download" class="btn btn-primary">Watch Now</a>
+                        <span class="btn btn-secondary">In Production</span>
                     </div>
                 </div>
             `).join('');
