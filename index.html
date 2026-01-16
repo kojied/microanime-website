@@ -38,11 +38,11 @@
                     <a href="#download" class="btn btn-primary btn-large">Download Free</a>
                     <div class="hero-stats">
                         <div class="stat">
-                            <span class="stat-number" id="total-episodes">35+</span>
+                            <span class="stat-number" id="total-episodes">109+</span>
                             <span class="stat-label">Episodes</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number" id="total-series">1</span>
+                            <span class="stat-number" id="total-series">4</span>
                             <span class="stat-label">Series</span>
                         </div>
                     </div>
@@ -195,17 +195,39 @@
     </footer>
 
     <script>
-        const DATA_URL = 'https://d15hc71e3n2xvd.cloudfront.net/data/series.json';
-
-        async function loadData() {
-            try {
-                const response = await fetch(DATA_URL);
-                const data = await response.json();
-                renderContent(data);
-            } catch (error) {
-                console.error('Failed to load series data:', error);
-            }
-        }
+        // Series data embedded directly (CloudFront requires signed URLs)
+        const SERIES_DATA = {
+            "series": [
+                {
+                    "id": "two-faces-of-the-archmage",
+                    "title": "Two Faces of the Archmage",
+                    "description": "A powerful mage hides a dark secret beneath his noble facade. When an unlikely apprentice discovers the truth, she must choose between exposing him or becoming his accomplice.",
+                    "coverImageURL": "",
+                    "totalEpisodes": 35
+                },
+                {
+                    "id": "suffering-as-a-service",
+                    "title": "Suffering as a Service",
+                    "description": "In a dystopian future, a startup monetizes human misery. One employee discovers the horrifying truth behind their business model and risks everything to expose it.",
+                    "coverImageURL": "",
+                    "totalEpisodes": 24
+                },
+                {
+                    "id": "infinite-inning",
+                    "title": "Infinite Inning",
+                    "description": "A baseball prodigy is trapped reliving the same championship game. To break free, he must uncover why he's stuck and what he's meant to learn.",
+                    "coverImageURL": "",
+                    "totalEpisodes": 20
+                },
+                {
+                    "id": "high-school-drama",
+                    "title": "High School Drama",
+                    "description": "Rivalries, romance, and revenge collide in this elite academy where every student has a secret. The new transfer student is about to shake everything up.",
+                    "coverImageURL": "",
+                    "totalEpisodes": 30
+                }
+            ]
+        };
 
         function renderContent(data) {
             const { series } = data;
@@ -235,8 +257,8 @@
             `).join('');
         }
 
-        // Load data on page load
-        loadData();
+        // Render on page load
+        renderContent(SERIES_DATA);
     </script>
 </body>
 </html>
